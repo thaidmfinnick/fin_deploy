@@ -18,7 +18,7 @@ defmodule FinDeploy.MixProject do
   def application do
     [
       mod: {FinDeploy.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :sasl, :edeliver, :ecto]
     ]
   end
 
@@ -41,7 +41,11 @@ defmodule FinDeploy.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:edeliver, ">= 1.9.2"},
-      {:distillery, "~> 2.1", warn_missing: false}
+      {:distillery,
+        git: "https://github.com/thaidmfinnick/distillery",
+        override: true,
+        runtime: false
+      }
     ]
   end
 

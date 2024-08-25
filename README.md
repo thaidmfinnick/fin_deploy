@@ -24,6 +24,8 @@ SELECT * FROM master_get_active_worker_nodes();
 
 3. setup edeliver + distillery + deploy on host and test with ecto repositories
 - setup `prod.exs` same as `dev.exs`
-- setup edeliver
-
+- setup edeliver in .deliver/config with prod.exs
+- `mix distillery.init`
+- test local with `mix distillery.release`, if error, fix
+- run on server with `mix edeliver build release --branch=main`
 
