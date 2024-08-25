@@ -9,7 +9,7 @@ PRODUCTION_USER="root"
 DELIVER_TO="/home/finnick/production"
 
 AUTO_VERSION=commit-count+git-revision+branch-unless-master
-RELEASE_STORE="cc@10.1.13.146:/home/finnick/releases/"
+RELEASE_STORE="root@103.200.20.242:/home/finnick/releases/"
 GIT_CLEAN_PATHS="_build rel priv/generated"
 
 pre_erlang_get_and_update_deps() {
