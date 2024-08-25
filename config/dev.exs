@@ -21,11 +21,11 @@ config :fin_deploy, FinDeploy.Repo.Citus,
   pool_size: 10
 
 config :fin_deploy,
-  env: :prod
+  env: :dev
 
 config :fin_deploy, ecto_repos: [
-  Workcake.Repo,
-  Workcake.Repo.Citus
+  FinDeploy.Repo,
+  FinDeploy.Repo.Citus
 ]
 
 config :fin_deploy, FinDeployWeb.Endpoint,
