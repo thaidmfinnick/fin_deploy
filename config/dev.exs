@@ -31,8 +31,7 @@ config :fin_deploy, ecto_repos: [
 config :fin_deploy, FinDeployWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [port: 4000],
-  url: [host: "103.200.20.242"],
+  http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,

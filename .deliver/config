@@ -13,7 +13,7 @@ RELEASE_STORE="root@103.200.20.242:/home/finnick/releases/"
 GIT_CLEAN_PATHS="_build rel priv/generated"
 
 pre_erlang_get_and_update_deps() {
-    local _local_secret_config_file="~/Documents/projects/finnick_world/fin_deploy/config/prod.exs"
+    local _local_secret_config_file="config/prod.exs"
         if [ "$TARGET_MIX_ENV" = "prod" ]; then
             status "Copying '$_local_secret_config_file' file to build host"
             scp "$_local_secret_config_file" "$BUILD_USER@$BUILD_HOST:$BUILD_AT/config/prod.exs"
