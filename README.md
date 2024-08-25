@@ -29,3 +29,5 @@ SELECT * FROM master_get_active_worker_nodes();
 - test local with `mix distillery.release`, if error, fix
 - run on server with `mix edeliver build release --branch=main`
 
+4. config if multi repo
+

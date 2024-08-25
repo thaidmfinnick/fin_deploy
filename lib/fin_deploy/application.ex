@@ -12,6 +12,7 @@ defmodule FinDeploy.Application do
       FinDeployWeb.Telemetry,
       # Start the Ecto repository
       FinDeploy.Repo,
+      FinDeploy.Repo.Citus,
       # Start the PubSub system
       {Phoenix.PubSub, name: FinDeploy.PubSub},
       # Start the Endpoint (http/https)
