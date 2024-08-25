@@ -8,7 +8,7 @@
 import Config
 
 config :fin_deploy,
-  ecto_repos: [FinDeploy.Repo]
+  ecto_repos: [FinDeploy.Repo, FinDeploy.Repo.Citus]
 
 # Configures the endpoint
 config :fin_deploy, FinDeployWeb.Endpoint,

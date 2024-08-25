@@ -2,30 +2,44 @@ import Config
 
 # Configure your database
 config :fin_deploy, FinDeploy.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "admin",
+  password: "admin",
   hostname: "localhost",
-  database: "fin_deploy_dev",
+  database: "findeploychat",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
-# For development, we disable any cache and enable
-# debugging and code reloading.
-#
-# The watchers configuration can be used to run external
-# watchers to your application. For example, we can use it
-# to bundle .js and .css sources.
+
+config :fin_deploy, FinDeploy.Repo.Citus,
+  username: "admin",
+  password: "admin",
+  hostname: "localhost",
+  database: "findeploychat",
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
+config :fin_deploy,
+  env: :prod
+
+config :fin_deploy, ecto_repos: [
+  Workcake.Repo,
+  Workcake.Repo.Citus
+]
+
 config :fin_deploy, FinDeployWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [port: 4000],
+  url: [host: "103.200.20.242"],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
   secret_key_base: "v1FBPk5Sfju7hU6l5J9vB33w95JFQSMeL1t3USfefIPNAoBcF/JAujoWnnQpmJbK",
   watchers: []
 
+config :logger, level: :warn
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed
