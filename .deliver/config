@@ -3,6 +3,7 @@ APP="fin_deploy"
 BUILD_HOST="103.200.20.242"
 BUILD_USER="root"
 BUILD_AT="/home/finnick/edeliver/fin_deploy"
+ECTO_REPOSITORY="FinDeloy.Repo.Citus"
 
 PRODUCTION_HOSTS="103.200.20.242"
 PRODUCTION_USER="root"
@@ -17,5 +18,5 @@ pre_erlang_get_and_update_deps() {
         if [ "$TARGET_MIX_ENV" = "prod" ]; then
             status "Copying '$_local_secret_config_file' file to build host"
             scp "$_local_secret_config_file" "$BUILD_USER@$BUILD_HOST:$BUILD_AT/config/prod.exs"
-      fi
+        fi
 }
