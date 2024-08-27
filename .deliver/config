@@ -5,6 +5,7 @@ BUILD_USER="root"
 BUILD_AT="/home/finnick/edeliver/fin_deploy"
 ECTO_REPOSITORY="FinDeloy.Repo.Citus"
 
+
 PRODUCTION_HOSTS="103.200.20.242"
 PRODUCTION_USER="root"
 DELIVER_TO="/home/finnick/production"
