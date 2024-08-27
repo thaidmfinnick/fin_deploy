@@ -10,7 +10,7 @@ PRODUCTION_HOSTS="103.200.20.242"
 PRODUCTION_USER="root"
 DELIVER_TO="/home/finnick/fin_deploy_prod"
 
-AUTO_VERSION=commit-count+git-revision+branch-unless-master
+AUTO_VERSION=commit-count+git-revision+branch+build-date+time
 RELEASE_STORE="root@103.200.20.242:/home/finnick/edeliver/fin_deploy_releases"
 GIT_CLEAN_PATHS="_build rel priv/generated"
 
