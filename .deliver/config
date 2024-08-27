@@ -11,6 +11,7 @@ RELEASE_STORE="root@103.200.20.242:/home/finnick/edeliver/fin_deploy_releases"
 
 AUTO_VERSION=commit-count+git-revision+branch+build-date+time
 GIT_CLEAN_PATHS="_build rel priv/generated"
+ECTO_REPOSITORY="FinDeply.Repo.Citus"
 
 pre_erlang_get_and_update_deps() {
     local _local_secret_config_file="config/prod.exs"
