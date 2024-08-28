@@ -30,4 +30,11 @@ SELECT * FROM master_get_active_worker_nodes();
 - run on server with `mix edeliver build release --branch=main`
 
 4. config if multi repo
+- config in edeliver fork repo
+
+5. step to build with edeliver
+- note:
+    - build release and deploy (need restart) => `mix edeliver build release --branch=main && mix edeliver deploy release to production`
+    <!-- - build upgrade and deploy (do not need restart) => `mix edeliver build upgrade --from=><git-revision> --branch=main &&` -->
+- build release and upgrade later
 
