@@ -43,7 +43,7 @@ defmodule FinDeploy.MixProject do
       # {:edeliver, ">= 1.9.2"},
       {:edeliver,
         git: "https://github.com/thaidmfinnick/edeliver.git",
-        ref: "483eb2aed7e9dfebb0a23a595d76a5ae2eb5aa8a",
+        ref: "fe4368366ab8045fd934658e67ff6dc3bfb711f1",
       },
       {:distillery,
         git: "https://github.com/thaidmfinnick/distillery",
